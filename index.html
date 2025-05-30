@@ -13,54 +13,70 @@
 <body>
     <!-- Header Section -->
     <header class="main-header">
-        <!-- Navbar at the top -->
-        <div class="content-wrapper">
-            <div class="header-nav">
+        <!-- Background decorative elements -->
+        <div class="vormtaal-icons">
+            <div class="vormtaal-icon vormtaal-icon-1"></div>
+            <div class="vormtaal-icon vormtaal-icon-2"></div>
+            <div class="vormtaal-icon vormtaal-icon-3"></div>
+            <div class="vormtaal-icon vormtaal-icon-4"></div>
+            <div class="vormtaal-icon vormtaal-icon-5"></div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="header-nav">
+            <div class="nav-wrapper">
                 <div class="nav-left">
                     <div class="logo-wrapper">
-                        <img src="images/logo.png" alt="MMMetaal Logo" class="nav-logo">
+                        <svg class="logo-vector" width="72" height="26" viewBox="0 0 72 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Logo SVG paths from Figma -->
+                            <path d="M37.8337 0H52.9681V26.2006H37.8337V0Z" fill="#D6D6D6"/>
+                            <path d="M18.9958 0H33.9603V26.2006H18.9958V0Z" fill="#D6D6D6"/>
+                            <path d="M38.141 0.000259399H71.9999V26.2006H38.141V0.000259399Z" fill="#FFFFFF"/>
+                            <path d="M19.0015 0H33.8589V26.2006H19.0015V0Z" fill="#D6D6D6"/>
+                            <path d="M19.013 0H52.809V26.2006H19.013V0Z" fill="#FFFFFF"/>
+                            <path d="M0 0H33.9595V26.2006H0V0Z" fill="#FFFFFF"/>
+                        </svg>
                     </div>
-                    <div class="nav-products">
+                </div>
+                <div class="nav-center">
+                    <div class="nav-item">
                         <span>Producten & diensten</span>
                     </div>
                 </div>
                 <div class="nav-right">
-                    <div class="language-selector" id="language-toggle">
-                        <span id="current-language">NL</span>
-                        <div class="language-divider"></div>
-                        <div class="language-arrow">
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L5 5L9 1" stroke="#D0D0D0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                    <div class="nav-buttons">
+                        <div class="language-selector">
+                            <span class="language-text">NL</span>
+                            <div class="language-dash"></div>
+                            <div class="chevron">
+                                <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5.5 4L10 1" stroke="#D0D0D0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="language-dropdown">
-                            <div class="language-option" data-lang="NL">NL</div>
-                            <div class="language-option" data-lang="ENG">ENG</div>
+                        <div class="contact-button">
+                            <span>Contact</span>
                         </div>
-                    </div>
-                    <div class="contact-button">
-                        <span>Contact</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
         
+        <!-- Header Content -->
         <div class="header-content">
-            <div class="menu-button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 12H21" stroke="#D5D8DD" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M3 6H21" stroke="#D5D8DD" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M3 18H21" stroke="#D5D8DD" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+            <div class="header-top">
+                <h1>Amet imperdiet blandit eu non neque mattis sit sit.</h1>
             </div>
-            <h1>Amet imperdiet blandit eu non neque mattis sit sit.</h1>
-            <div class="hero-image">
-                <img src="images/mmmetaal_logol2.jpg" alt="MMMetaal Hero" class="hero">
+            <div class="header-bottom">
+                <div class="iron-blocks">
+                    <img src="images/blockrow.png" alt="Iron blocks" class="iron-block-1">
+                    <img src="images/blockrow.png" alt="Iron blocks" class="iron-block-2">
+                </div>
             </div>
-            <div class="scroll-down-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19" stroke="#D5D8DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M19 12L12 19L5 12" stroke="#D5D8DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <div class="arrow-down-indicator">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 3L0 15" stroke="#D5D8DD" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M0 0L0 1" stroke="#D5D8DD" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
         </div>
