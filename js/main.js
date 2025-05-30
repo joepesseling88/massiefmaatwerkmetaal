@@ -4,6 +4,17 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Add parallax effect to iron blocks
+    const ironBlocks = document.querySelector('.iron-blocks');
+    if (ironBlocks) {
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition < 1000) { // Only apply effect when near the header
+                ironBlocks.style.transform = `rotate(${scrollPosition * 0.02}deg)`;
+            }
+        });
+    }
+    
     // Mobile menu toggle
     const menuButton = document.querySelector('.menu-button');
     const headerNav = document.querySelector('.header-nav');
@@ -129,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Scroll down arrow functionality
-    const scrollDownArrow = document.querySelector('.scroll-down-arrow');
+    const scrollDownArrow = document.querySelector('.arrow-down-indicator');
     if (scrollDownArrow) {
         scrollDownArrow.addEventListener('click', function() {
             const productsSection = document.querySelector('.products-section');
@@ -141,6 +152,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Add hover effects for product cards
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+    });
 });
 
 // Add error styling to form elements
@@ -155,6 +180,40 @@ document.addEventListener('DOMContentLoaded', function() {
         .form-checkbox.error {
             color: #FA514A;
         }
+        
+        .submit-button:hover {
+            background-color: #FA514A;
+            color: #F0F0F0;
+            transform: translateY(-2px);
+        }
+        
+        .tag:hover {
+            background-color: #D0D0D0;
+            color: #202020;
+        }
     `;
     document.head.appendChild(style);
+    
+    // Add animation to contact form
+    const contactForm = document.querySelector('.contact-form-container');
+    if (contactForm) {
+        window.addEventListener('scroll', function() {
+            const formPosition = contactForm.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (formPosition < screenPosition) {
+                contactForm.classList.add('visible');
+            }
+        });
+        
+        // Check initial position in case the form is already in view
+        setTimeout(function() {
+            const formPosition = contactForm.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (formPosition < screenPosition) {
+                contactForm.classList.add('visible');
+            }
+        }, 100);
+    }
 });
