@@ -8,19 +8,18 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Note: Host Grotesk font was used in the design, but we'll use a similar Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bitter:ital,wght@0,100..900;1,100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Manrope:wght@200..800&family=Oxygen:wght@300;400;700&family=Roboto+Slab:wght@100..900&family=Space+Grotesk:wght@300..700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
     <header class="main-header">
         <!-- Background decorative elements -->
         <div class="vormtaal-icons">
-            <div class="vormtaal-icon vormtaal-icon-1"></div>
-            <div class="vormtaal-icon vormtaal-icon-2"></div>
-            <div class="vormtaal-icon vormtaal-icon-3"></div>
-            <div class="vormtaal-icon vormtaal-icon-4"></div>
-            <div class="vormtaal-icon vormtaal-icon-5"></div>
+            <img src="images/vormtaal_icon_1.png" alt="Vormtaal Icon" class="vormtaal-icon vormtaal-icon-1">
+            <img src="images/vormtaal_icon_2.png" alt="Vormtaal Icon" class="vormtaal-icon vormtaal-icon-2">
+            <img src="images/vormtaal_icon_3.png" alt="Vormtaal Icon" class="vormtaal-icon vormtaal-icon-3">
+            <img src="images/vormtaal_icon_4.png" alt="Vormtaal Icon" class="vormtaal-icon vormtaal-icon-4">
+            <img src="images/vormtaal_icon_5.png" alt="Vormtaal Icon" class="vormtaal-icon vormtaal-icon-5">
         </div>
         
         <!-- Navigation -->
@@ -28,15 +27,7 @@
             <div class="nav-wrapper">
                 <div class="nav-left">
                     <div class="logo-wrapper">
-                        <svg class="logo-vector" width="72" height="26" viewBox="0 0 72 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Logo SVG paths from Figma -->
-                            <path d="M37.8337 0H52.9681V26.2006H37.8337V0Z" fill="#D6D6D6"/>
-                            <path d="M18.9958 0H33.9603V26.2006H18.9958V0Z" fill="#D6D6D6"/>
-                            <path d="M38.141 0.000259399H71.9999V26.2006H38.141V0.000259399Z" fill="#FFFFFF"/>
-                            <path d="M19.0015 0H33.8589V26.2006H19.0015V0Z" fill="#D6D6D6"/>
-                            <path d="M19.013 0H52.809V26.2006H19.013V0Z" fill="#FFFFFF"/>
-                            <path d="M0 0H33.9595V26.2006H0V0Z" fill="#FFFFFF"/>
-                        </svg>
+                        <img src="images/footer-logo-new.svg" alt="MMMetaal Logo" class="logo-vector">
                     </div>
                 </div>
                 <div class="nav-center">
@@ -46,13 +37,16 @@
                 </div>
                 <div class="nav-right">
                     <div class="nav-buttons">
-                        <div class="language-selector">
+                        <div class="language-selector" id="language-dropdown">
                             <span class="language-text">NL</span>
                             <div class="language-dash"></div>
                             <div class="chevron">
                                 <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L5.5 4L10 1" stroke="#D0D0D0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
+                            </div>
+                            <div class="language-dropdown">
+                                <a href="#" class="language-option">ENG</a>
                             </div>
                         </div>
                         <div class="contact-button">
@@ -75,9 +69,9 @@
                 </div>
             </div>
             <div class="arrow-down-indicator">
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 3L0 15" stroke="#D5D8DD" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M0 0L0 1" stroke="#D5D8DD" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19" stroke="#D5D8DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19 12L12 19L5 12" stroke="#D5D8DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
         </div>
@@ -97,7 +91,7 @@
                     <div class="title-container">
                         <h2>Amet imperdiet blandit eu non<br>neque mattis sit.</h2>
                         <p class="section-description">
-                            Lorem ipsum dolor sit amet consectetur. Est auctor morbi turpis enim et feugiat viverra pharetra. Nec nulla ipsum nisl sit. Volutpat vulputate commodo neque gravida.
+                            Lorem ipsum dolor sit amet consectetur.<br>Est auctor morbi turpis enim et feugiat <br> viverra pharetra. Nec nulla ipsum nisl sit. <br>Volutpat vulputate commodo neque gravida.
                         </p>
                     </div>
                 </div>
@@ -185,6 +179,17 @@
                 </div>
             </div>
             
+            <!-- Services Bottom Content -->
+            <div class="services-bottom-content">
+                <div class="services-bottom-text">
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3>Amet imperdiet blandit eu non neque mattis sit sit.</h3>
+                    <h3>Egestas interdum sit non quis viverra et nec vitae.</h3>
+                    <h3>Pellentesque facilisi dictum at amet eget id in quisque lacus.</h3>
+                    <p class="bottom-text-small">Lorem ipsum dolor sit amet consectetur. Est auctor morbi turpis<br>enim et feugiat viverra pharetra. Nec nulla ipsum nisl sit. Volutpat<br>vulputate commodo neque gravida?</p>
+                    <a href="#" class="contact-btn">Contact</a>
+                </div>
+            </div>
         </div>
         
         <!-- Block Row Image -->
@@ -211,7 +216,7 @@
                         <div class="info-column">
                             <div class="info-item">
                                 <h4>Telefoon</h4>
-                                <p>+316 02 83 02 48</p>
+                                <p>+31 6 02 83 02 48</p>
                             </div>
                             <div class="info-item">
                                 <h4>Email</h4>
@@ -265,7 +270,7 @@
                         <div class="form-footer">
                             <div class="form-checkbox">
                                 <input type="checkbox" id="terms" name="terms" required>
-                                <label for="terms">Ik ga akkoord met de algemene voorwaarden.</label>
+                                <label for="terms">Ik ga akkoord met de <a href="#">algemene voorwaarden</a>.</label>
                             </div>
                             <button type="submit" class="submit-button">Verzenden</button>
                         </div>
@@ -277,44 +282,52 @@
 
     <!-- Footer -->
     <footer class="main-footer">
+        <div class="logo-wrap-footer">
+            <img src="images/logo.png" alt="MMMetaal Logo" class="footer-logo">
+        </div>
+        <div class="footer-content">
+            <div class="footer-details">
+                <div class="footer-section contact-details">
+                    <div class="footer-divider"></div>
+                    <div class="footer-contact-grid">
+                        <div class="footer-column">
+                            <div class="footer-item">
+                                <h4>Telefoon</h4>
+                                <p>+316 02 83 02 48</p>
+                            </div>
+                            <div class="footer-item">
+                                <h4>address</h4>
+                                <p>Grote Beren Bos 12a<br>2048 CC, Honinghemel</p>
+                            </div>
+                        </div>
+                        <div class="footer-column">
+                            <div class="footer-item">
+                                <h4>Email</h4>
+                                <p>info@mmmetaal.com</p>
+                            </div>
+                            <div class="footer-item">
+                                <h4>kvk</h4>
+                                <p>23794 237992</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section text-section">
+                    <div class="footer-divider"></div>
+                    <div class="footer-text-container">
+                        <div class="footer-text">
+                            <p>Lorem ipsum dolor sit amet consectetur. Amet imperdiet blandit eu non neque mattis sit sit. Tincidunt viverra at adipiscing ac proin. Venenatis egestas interdum sit non quis viverra et nec vitae. Pellentesque facilisi dictum at amet eget id in quisque lacus.</p>
+                        </div>
+                        <div class="footer-links">
+                            <a href="#">Privacy & algemene voorwaarden</a>
+                            <p class="copyright">mmmetaal© 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="footer-image">
             <img src="images/footer.png" alt="Footer Image">
-        </div>
-        <img src="images/footer-logo.png" alt="MMMetaal Logo" class="footer-logo">
-        <div class="footer-content">
-            <div class="footer-section">
-                <div class="footer-divider"></div>
-                <div class="footer-grid">
-                    <div class="footer-item">
-                        <h4>Telefoon</h4>
-                        <p>+316 02 83 02 48</p>
-                    </div>
-                    <div class="footer-item">
-                        <h4>Email</h4>
-                        <p>info@mmmetaal.com</p>
-                    </div>
-                    <div class="footer-item">
-                        <h4>address</h4>
-                        <p>Grote Beren Bos 12a<br>2048 CC, Honinghemel</p>
-                    </div>
-                    <div class="footer-item">
-                        <h4>kvk</h4>
-                        <p>23794 237992</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-section">
-                <div class="footer-divider"></div>
-                <div class="footer-bottom">
-                    <div class="footer-text">
-                        <p>Lorem ipsum dolor sit amet consectetur. Amet imperdiet blandit eu non neque mattis sit sit. Tincidunt viverra at adipiscing ac proin. Venenatis egestas interdum sit non quis viverra et nec vitae. Pellentesque facilisi dictum at amet eget id in quisque lacus.</p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#">Privacy & algemene voorwaarden</a>
-                        <p class="copyright">mmmetaal© 2025</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </footer>
 

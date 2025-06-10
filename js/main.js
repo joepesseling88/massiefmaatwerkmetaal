@@ -4,16 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Add parallax effect to iron blocks
-    const ironBlocks = document.querySelector('.iron-blocks');
-    if (ironBlocks) {
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            if (scrollPosition < 1000) { // Only apply effect when near the header
-                ironBlocks.style.transform = `rotate(${scrollPosition * 0.02}deg)`;
-            }
-        });
-    }
+    // Iron blocks animation removed as requested
     
     // Mobile menu toggle
     const menuButton = document.querySelector('.menu-button');
@@ -26,16 +17,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Language toggle
-    const languageToggle = document.getElementById('language-toggle');
-    const currentLanguage = document.getElementById('current-language');
+    // Language dropdown
+    const languageDropdown = document.getElementById('language-dropdown');
     const languageOptions = document.querySelectorAll('.language-option');
     
-    if (languageToggle && currentLanguage && languageOptions.length > 0) {
+    if (languageDropdown && languageOptions.length > 0) {
+        // Toggle dropdown on click
+        languageDropdown.addEventListener('click', function(e) {
+            const dropdown = this.querySelector('.language-dropdown');
+            if (dropdown) {
+                dropdown.classList.toggle('active');
+                e.stopPropagation();
+            }
+        });
+        
+        // Close dropdown when clicking elsewhere on the page
+        document.addEventListener('click', function(e) {
+            if (!languageDropdown.contains(e.target)) {
+                const dropdown = languageDropdown.querySelector('.language-dropdown');
+                if (dropdown && dropdown.classList.contains('active')) {
+                    dropdown.classList.remove('active');
+                }
+            }
+        });
+        
+        // Handle language selection
         languageOptions.forEach(option => {
-            option.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
-                currentLanguage.textContent = lang;
+            option.addEventListener('click', function(e) {
+                e.preventDefault();
+                const lang = this.textContent;
+                const currentLang = languageDropdown.querySelector('.language-text');
+                if (currentLang) {
+                    currentLang.textContent = lang;
+                }
+                // Close the dropdown after selection
+                const dropdown = languageDropdown.querySelector('.language-dropdown');
+                if (dropdown) {
+                    dropdown.classList.remove('active');
+                }
                 // Here you would typically implement language switching logic
                 // For this example, we're just changing the displayed text
             });
