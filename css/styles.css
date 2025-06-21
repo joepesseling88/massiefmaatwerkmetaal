@@ -1220,13 +1220,18 @@ p {
     .product-card {
         width: 100%;
         position: relative;
-        padding-top: 100px;
+        padding: 30px;
+        padding-right: 130px;
+        padding-top: 60px;
+        height: auto;
+        min-height: 280px;
+        margin-bottom: 12px;
     }
     
     .card-image {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 30px;
+        right: 30px;
         width: 80px;
         height: 80px;
         margin-bottom: 0;
@@ -1234,6 +1239,16 @@ p {
     
     .card-content {
         width: 100%;
+        justify-content: flex-start;
+        gap: 24px;
+    }
+    
+    .card-header {
+        gap: 20px;
+    }
+    
+    .card-description {
+        line-height: 1.5;
     }
     
     /* Footer image smaller on mobile */
@@ -1282,7 +1297,15 @@ p {
     }
     
     .contact-info {
-        padding: 32px 24px;
+        display: none;
+    }
+    
+    .contact-container {
+        margin-top: 32px;
+    }
+    
+    .contact-form-container {
+        border-radius: 4px;
     }
     
     .nav-wrapper {
