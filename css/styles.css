@@ -405,6 +405,11 @@ p {
     border-radius: 50%;
 }
 
+.contact-section .pill-dot {
+    background-color: var(--light-gray);
+    border-radius: 0;
+}
+
 .pill-text {
     background-color: var(--primary-red);
     padding: 6px 12px;
@@ -549,7 +554,7 @@ p {
 /* Services Bottom Content */
 .services-bottom-content {
     display: flex;
-    margin-top: 80px;
+    margin-top: 192px;
     margin-bottom: 80px;
     padding-left: 25%;
 }
