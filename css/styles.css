@@ -31,6 +31,7 @@ body {
     line-height: 1.5;
     color: var(--black);
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 img {
@@ -99,11 +100,12 @@ p {
     color: var(--white);
     position: relative;
     width: 100%;
-    height: 1024px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    user-select: none;
 }
 
 /* Background decorative elements */
@@ -339,51 +341,21 @@ p {
 
 .header-bottom {
     width: 100%;
-    height: 100%;
+    flex: 1;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    padding-bottom: 0;
 }
 
-.iron-blocks {
+.header-bottom-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    object-fit: contain;
     position: relative;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    margin-top: 50px;
-}
-
-.iron-block-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.iron-block-2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0.3;
-    animation: pulse 8s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 0.2;
-    }
-    50% {
-        opacity: 0.4;
-    }
-    100% {
-        opacity: 0.2;
-    }
+    z-index: 2;
 }
 
 .arrow-down-indicator {
@@ -410,6 +382,7 @@ p {
 .products-section {
     background-color: var(--light-gray);
     padding: 192px 40px;
+    overflow: hidden;
 }
 
 .section-header {
@@ -457,7 +430,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;
+    gap: 120px;
 }
 
 .title-container h2 {
@@ -632,20 +605,20 @@ p {
 
 /* Block Row Image */
 .block-row {
-    width: 100%;
+    width: 100vw;
     margin: 0;
     padding: 0;
     position: relative;
-    overflow: hidden;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .block-row img {
     width: 100%;
     height: auto;
     display: block;
-    min-width: 100%;
-    max-width: none;
-    position: relative;
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -1074,17 +1047,8 @@ p {
         height: 250px;
     }
     
-    .iron-blocks {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 400px;
-    }
-    
-    .iron-block-1, .iron-block-2 {
-        width: 100%;
-        height: 100%;
+    .header-bottom-image {
+        max-width: 100%;
     }
     
     .services-bottom-content {
