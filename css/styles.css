@@ -1085,10 +1085,6 @@ p {
     .services-bottom-text {
         max-width: 100%;
     }
-    
-    .title-container {
-        gap: 24px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1166,90 +1162,6 @@ p {
     
     /* Mobile-friendly form */
     .contact-form-container {
-        padding: 32px 20px;
-        gap: 32px;
-    }
-    
-    .contact-form-container h3 {
-        font-size: 28px;
-        margin-bottom: 24px;
-    }
-    
-    .contact-form {
-        gap: 24px;
-    }
-    
-    .form-group {
-        gap: 8px;
-    }
-    
-    .form-group label {
-        font-size: 12px;
-    }
-    
-    .form-group input, 
-    .form-group textarea {
-        font-size: 16px;
-        padding: 8px 0;
-        margin-bottom: 8px;
-    }
-    
-    .form-footer {
-        gap: 24px;
-    }
-    
-    .form-checkbox {
-        gap: 8px;
-    }
-    
-    .form-checkbox input[type="checkbox"] {
-        width: 18px;
-        height: 18px;
-        flex-shrink: 0;
-    }
-    
-    .form-checkbox label {
-        font-size: 12px;
-        line-height: 1.5;
-    }
-    
-    .submit-button {
-        padding: 12px 24px;
-        font-size: 14px;
-        width: 100%;
-        text-align: center;
-    }
-    
-    /* Contact info mobile improvements */
-    .contact-info {
-        padding: 32px 20px;
-        min-height: 400px;
-    }
-    
-    .info-columns {
-        gap: 32px;
-    }
-    
-    .info-item h4 {
-        font-size: 12px;
-    }
-    
-    .info-item p {
-        font-size: 14px;
-    }
-    
-    .main-header {
-        padding: 16px;
-        height: 85vh;
-        min-height: 500px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .header-nav {
-        width: 100%;
-        margin-bottom: 10px;
-        padding: 12px 16px;
     }
     
     .nav-wrapper {
