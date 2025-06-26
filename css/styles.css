@@ -1291,8 +1291,7 @@ p {
     }
     
     .card-description {
-        line-height: 1.4;
-        font-size: 13px;
+        display: none;
     }
     
     /* Footer image smaller on mobile */
@@ -1518,7 +1517,7 @@ p {
         grid-template-columns: 1fr;
     }
 
-    .card-wrapper {
+    .product-wrapper {
         height: 300px;
     }
     
@@ -1531,7 +1530,7 @@ p {
     
     .nav-left {
         justify-self: start;
-        margin-left: 10px;
+        margin-left: 5px;
     }
     
     .nav-center {
@@ -1578,7 +1577,7 @@ p {
     .logo-vector {
         width: 80px;
         height: 22px;
-        margin-left: 10px;
+        margin-left: 5px;
     }
     
     .header-bottom-image {
