@@ -460,7 +460,7 @@ p {
 
 .product-card {
     width: calc(25% - 6px);
-    height: 384px;
+    height: 484px;
     background-color: var(--dark-bg);
     border-radius: 8px;
     overflow: hidden;
