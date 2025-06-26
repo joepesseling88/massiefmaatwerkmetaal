@@ -1236,8 +1236,8 @@ p {
         position: relative;
         padding: 24px;
         padding-right: 120px;
-        height: auto;
-        min-height: auto;
+        height: 400px;
+        min-height: 400px;
         margin-bottom: 16px;
         display: flex;
         flex-direction: column;
@@ -1291,7 +1291,8 @@ p {
     }
     
     .card-description {
-        display: none;
+        line-height: 1.4;
+        font-size: 13px;
     }
     
     /* Footer image smaller on mobile */
@@ -1460,7 +1461,8 @@ p {
     .product-card {
         padding: 20px;
         padding-right: 100px;
-        min-height: auto;
+        height: 350px;
+        min-height: 350px;
         margin-bottom: 24px;
     }
     
