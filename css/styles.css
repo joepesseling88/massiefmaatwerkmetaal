@@ -1531,6 +1531,7 @@ p {
     
     .nav-left {
         justify-self: start;
+        margin-left: 10px;
     }
     
     .nav-center {
@@ -1544,7 +1545,7 @@ p {
     
     .nav-item {
         font-size: 12px;
-        padding: 4px 6px;
+        padding: 4px 12px;
     }
     
     h1 {
@@ -1577,10 +1578,16 @@ p {
     .logo-vector {
         width: 80px;
         height: 22px;
+        margin-left: 10px;
     }
     
     .header-bottom-image {
         max-width: 320px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
     
     .services-bottom-text h3 {
