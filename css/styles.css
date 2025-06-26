@@ -1517,6 +1517,10 @@ p {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+
+    .card-wrapper {
+        height: 300px;
+    }
     
     .nav-wrapper {
         display: grid;
