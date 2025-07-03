@@ -460,7 +460,7 @@ p {
 
 .product-card {
     width: calc(25% - 6px);
-    height: 484px;
+    height: 384px;
     background-color: var(--dark-bg);
     border-radius: 8px;
     overflow: hidden;
@@ -572,8 +572,11 @@ p {
     margin-bottom: 4px;
     color: var(--black);
     line-height: 0.977;
-    white-space: nowrap;
+    text-indent: 160px;
+    /* white-space: nowrap;  de nowrap kan eruit wanneer er een paragraph indent in de h3 komt. */ 
 }
+
+
 
 .services-bottom-text h3:first-child {
     margin-left: 90px;
@@ -676,14 +679,15 @@ p {
 .info-item h4 {
     color: var(--black);
     text-transform: uppercase;
+    letter-spacing: 0.05rem;
     font-size: 14px;
     font-weight: 500;
 }
 
 .info-item p {
-    color: var(--dark-gray);
+    color: #6e6e6e;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .contact-map {
@@ -709,15 +713,15 @@ p {
     padding: 48px;
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 32px;
     opacity: 1;
 }
 
 .contact-form-container h3 {
     color: var(--light-gray);
-    font-size: 40px;
+    font-size: 32px;
     line-height: 1.2;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .contact-form {
@@ -736,7 +740,7 @@ p {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 0px;
     flex: 1;
 }
 
@@ -747,6 +751,7 @@ p {
 .form-group label {
     color: var(--light-gray);
     font-size: 14px;
+    letter-spacing: 0.05rem;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -760,7 +765,7 @@ p {
     font-size: 16px;
     outline: none;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
 }
 
 .form-group textarea {
@@ -781,8 +786,8 @@ p {
 }
 
 .form-checkbox input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border: 1px solid var(--light-gray);
     border-radius: 4px;
     appearance: none;
@@ -791,7 +796,7 @@ p {
     outline: none;
     cursor: pointer;
     position: relative;
-    margin-top: 2px;
+    margin-top: 0px;
 }
 
 .form-checkbox input[type="checkbox"]:checked::before {
@@ -805,7 +810,7 @@ p {
 
 .form-checkbox label {
     color: var(--light-gray);
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.4;
     font-weight: 300;
 }
@@ -930,13 +935,14 @@ p {
     color: var(--footer-title);
     font-size: 14px;
     font-weight: 500;
+    letter-spacing: 0.05rem;
     text-transform: uppercase;
 }
 
 .footer-item p {
     color: var(--footer-text);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .footer-text-container {
@@ -953,7 +959,7 @@ p {
     color: var(--footer-light-text);
     font-size: 14px;
     font-weight: 300;
-    line-height: 1.02;
+    line-height: 1.22;
     letter-spacing: 0.06em;
 }
 
@@ -1291,7 +1297,7 @@ p {
     }
     
     .card-description {
-        line-height: 1.4;
+        line-height: 1.45;
         font-size: 13px;
     }
     
