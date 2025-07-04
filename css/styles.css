@@ -168,10 +168,11 @@ p {
     background-color: var(--black);
     border-radius: 8px;
     padding: 16px 24px;
-    width: 1360px;
+    max-width: 1360px;   /* better than fixed width */
+    width: 100%;         /* full width up to max */
+    margin: 0 auto 20px auto;  /* center horizontally */
     position: relative;
     z-index: 10;
-    margin-bottom: 20px;
 }
 
 .nav-wrapper {
