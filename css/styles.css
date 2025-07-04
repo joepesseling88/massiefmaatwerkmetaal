@@ -982,25 +982,6 @@ p {
 }
 
 /* ===== RESPONSIVE STYLES ===== */
-@media (max-width: 1360px) {
-    /* Ensure the header nav doesn't overflow on screens smaller than the max content width */
-    .header-nav {
-        width: 100%;
-        max-width: 100%;
-        padding: 16px 24px;
-    }
-    
-    /* Add padding to content wrapper for screens smaller than max content width */
-    .content-wrapper {
-        padding: 0 20px;
-    }
-    
-    /* Ensure footer content doesn't overflow */
-    .footer-content {
-        padding: 0 20px;
-    }
-}
-
 @media (max-width: 1200px) {
     .main-header {
         height: auto;
@@ -1064,34 +1045,8 @@ p {
     }
 }
 
-/* Intermediate range between desktop and tablet */
-@media (max-width: 1200px) and (min-width: 1101px) {
-    .nav-wrapper {
-        gap: 50px;
-    }
-    
-    .nav-item {
-        font-size: 15px;
-        padding: 6px 10px;
-    }
-    
-    .contact-button {
-        padding: 6px 20px;
-        font-size: 15px;
-    }
-    
-    .footer-details {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    
-    .footer-text-container {
-        flex-wrap: wrap;
-    }
-}
-
 /* Tablet specific styles */
-@media (max-width: 1100px) and (min-width: 769px) {
+@media (max-width: 1200px) and (min-width: 769px) {
     .main-header {
         padding: 20px;
     }
