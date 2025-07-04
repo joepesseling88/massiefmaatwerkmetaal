@@ -986,10 +986,20 @@ p {
     .main-header {
         height: auto;
         min-height: 800px;
+        padding: 20px;
+    }
+    
+    .header-nav {
+        width: 100%;
+        max-width: 100%;
     }
     
     .nav-wrapper {
         gap: 200px;
+    }
+    
+    .content-wrapper {
+        padding: 0 20px;
     }
     
     h1 {
@@ -1027,6 +1037,132 @@ p {
     
     .services-bottom-content {
         padding-left: 15%;
+    }
+    
+    .contact-details, .text-section {
+        width: 100%;
+    }
+    
+    .footer-text {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .footer-links {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Tablet specific styles */
+@media (max-width: 1100px) and (min-width: 769px) {
+    .main-header {
+        padding: 20px;
+    }
+    
+    .header-nav {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px 20px;
+    }
+    
+    .content-wrapper {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+    
+    .nav-wrapper {
+        gap: 20px;
+    }
+    
+    .nav-center {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .nav-item {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+    
+    .contact-button {
+        padding: 6px 16px;
+        font-size: 14px;
+    }
+    
+    .language-selector {
+        padding: 6px 8px;
+    }
+    
+    .language-text {
+        font-size: 14px;
+    }
+    
+    .products-section {
+        padding: 120px 0;
+    }
+    
+    .contact-section {
+        padding: 120px 0;
+    }
+    
+    .main-footer {
+        padding: 32px 20px 0 20px;
+    }
+    
+    .footer-details {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .contact-details, .text-section {
+        width: 100%;
+    }
+    
+    .footer-contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        width: 100%;
+    }
+    
+    .footer-column {
+        width: 100%;
+    }
+    
+    .footer-text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .footer-text {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .footer-links {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .services-bottom-content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .services-bottom-text {
+        max-width: 100%;
+    }
+    
+    .services-bottom-text h3 {
+        font-size: 28px;
+        text-indent: 80px;
+    }
+    
+    .services-bottom-text h3:first-child {
+        margin-left: 40px;
     }
 }
 
