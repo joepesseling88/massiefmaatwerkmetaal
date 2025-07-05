@@ -982,7 +982,7 @@ p {
 }
 
 /* ===== RESPONSIVE STYLES ===== */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .main-header {
         height: auto;
         min-height: 800px;
@@ -1055,7 +1055,7 @@ p {
 }
 
 /* Tablet specific styles */
-@media (max-width: 1100px) and (min-width: 769px) {
+@media (max-width: 1300px) and (min-width: 769px) {
     .main-header {
         padding: 20px;
     }
