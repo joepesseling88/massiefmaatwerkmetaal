@@ -992,7 +992,7 @@ p {
     
     .header-nav {
         width: 100%;
-        max-width: 100%;
+        max-width: 1360px;
     }
     
     .nav-wrapper {
