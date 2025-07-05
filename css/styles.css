@@ -168,7 +168,8 @@ p {
     background-color: var(--black);
     border-radius: 8px;
     padding: 16px 24px;
-    width: 1360px;
+    max-width: 1360px;
+    width:100%;
     position: relative;
     z-index: 10;
     margin-bottom: 20px;
@@ -982,7 +983,7 @@ p {
 }
 
 /* ===== RESPONSIVE STYLES ===== */
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
     .main-header {
         height: auto;
         min-height: 800px;
@@ -1055,7 +1056,7 @@ p {
 }
 
 /* Tablet specific styles */
-@media (max-width: 1300px) and (min-width: 769px) {
+@media (max-width: 992px) and (min-width: 769px) {
     .main-header {
         padding: 20px;
     }
@@ -1163,72 +1164,6 @@ p {
     
     .services-bottom-text h3:first-child {
         margin-left: 40px;
-    }
-}
-
-@media (max-width: 992px) {
-    .header-nav {
-        width: 100%;
-        padding: 12px 16px;
-    }
-    
-    .nav-wrapper {
-        gap: 20px;
-    }
-    
-    .nav-center {
-        display: block;
-        flex: 0;
-    }
-    
-    .nav-item {
-        font-size: 14px;
-        padding: 6px 8px;
-    }
-    
-    .main-header {
-        height: 100vh;
-        min-height: 600px;
-    }
-    
-    .arrow-down-indicator {
-        display: none;
-    }
-    
-    .products-section {
-        padding: 100px 0;
-    }
-    
-    .contact-section {
-        padding: 100px 0;
-    }
-    
-    .card-wrapper {
-        justify-content: center;
-    }
-    
-    .info-column {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-info {
-        min-height: 500px;
-    }
-    
-    .contact-map {
-        height: 250px;
-    }
-    
-    .header-bottom-image {
-        max-width: 100%;
-    }
-    
-    .services-bottom-content {
-        padding-left: 0;
-    }
-    
-    .services-bottom-text {
-        max-width: 100%;
     }
 }
 
