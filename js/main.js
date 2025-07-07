@@ -4,6 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Preloader functionality
+    initializePreloader();
+    
     // Iron blocks animation removed as requested
     
     // Mobile menu toggle
@@ -236,3 +239,75 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     }
 });
+
+/**
+ * Preloader functionality
+ * Handles the sliding bar loader animation and garage door reveal when page is loaded
+ */
+function initializePreloader() {
+    const preloader = document.getElementById('preloader');
+    
+    if (!preloader) return;
+    
+    // Ensure preloader is visible initially
+    preloader.style.display = 'flex';
+    
+    // Timing variables
+    const minDisplayTime = 500; // 0.5 seconds minimum display time - UX friendly
+    const startTime = Date.now();
+    let isPageLoaded = false;
+    let isDOMReady = false;
+    
+    // Check if DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            isDOMReady = true;
+            checkAndHidePreloader();
+        });
+    } else {
+        isDOMReady = true;
+    }
+    
+    // Check if all resources are loaded
+    if (document.readyState === 'complete') {
+        isPageLoaded = true;
+        checkAndHidePreloader();
+    } else {
+        window.addEventListener('load', function() {
+            isPageLoaded = true;
+            checkAndHidePreloader();
+        });
+    }
+    
+    // Safety timeout to ensure preloader doesn't stay forever
+    setTimeout(function() {
+        if (preloader && !preloader.classList.contains('garage-door-reveal')) {
+            hidePreloader();
+        }
+    }, 8000); // 8 second maximum (longer to account for min display time)
+    
+    function checkAndHidePreloader() {
+        // Wait for both DOM and resources to be ready
+        if (isDOMReady && isPageLoaded) {
+            const elapsedTime = Date.now() - startTime;
+            const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+            
+            // Wait for minimum display time before hiding
+            setTimeout(hidePreloader, remainingTime);
+        }
+    }
+    
+    function hidePreloader() {
+        if (!preloader) return;
+        
+        // Add garage-door-reveal class to trigger top-to-bottom reveal animation
+        preloader.classList.add('garage-door-reveal');
+        
+        // Remove preloader from DOM after animation completes
+        setTimeout(function() {
+            if (preloader && preloader.parentNode) {
+                preloader.parentNode.removeChild(preloader);
+            }
+        }, 800); // Match CSS animation duration
+    }
+}
