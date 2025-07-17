@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bitter:ital,wght@0,100..900;1,100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Manrope:wght@200..800&family=Oxygen:wght@300;400;700&family=Roboto+Slab:wght@100..900&family=Space+Grotesk:wght@300..700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
 </head>
 <body>
     <!-- Preloader -->
@@ -67,14 +71,14 @@
         <!-- Header Content -->
         <div class="header-content">
             <div class="header-top">
-                <h1>Massief in metaal, maatwerk in iedere levering</h1>
+                <h1 data-split="heading">Massief in metaal, maatwerk in iedere levering</h1>
             </div>
-            <div class="header-bottom">
-                <figure>
+            <div class="header-bottom" data-momentum-hover-init>
+                <figure data-momentum-hover-element>
                     <picture>
                         <source srcset="images/iron_shape_2400.png" media="(min-width: 1600px)">
                         <source srcset="images/iron_shape_1600.png" media="(min-width: 800px)">
-                        <img src="images/iron_shape_800.png" alt="Iron Shape" class="header-bottom-image">
+                        <img src="images/iron_shape_800.png" alt="Iron Shape" class="header-bottom-image" data-momentum-hover-target>
                     </picture>
                 </figure>
             </div>
@@ -100,7 +104,7 @@
                 <div class="section-title">
                     <div class="title-container">
                         <h2>Direct materiaal nodig?<br> Wij leveren het op maat</h2>
-                        <p class="section-description">
+                        <p class="section-description" data-split="description">
                             Massief Maatwerk Metaal is specialist in maatwerk uit voorraad: rondstaf, RVS en ballastmaterialen, professioneel gezaagd en snel geleverd.<br> 
                         </p>
                     </div>
@@ -240,7 +244,7 @@
                                 <p>23794 237992</p>
                             </div>
                         </div>
-                    </div>
+                    </div>m
                     <div class="contact-map">
                         <img src="images/contact_blocks_final2.png" alt="Contact blocks">
                     </div>

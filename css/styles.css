@@ -204,20 +204,41 @@ p {
 
 /* ===== HEADER SECTION ===== */
 
-/* Header text animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Text reveal animation styles */
+[data-split="heading"],
+[data-split="description"] {
+    visibility: hidden; /* Hide elements initially to prevent FOUC */
+    -webkit-text-rendering: optimizeSpeed; 
+    text-rendering: optimizeSpeed;
+    -webkit-transform: translateZ(0); 
+    font-kerning: none;
+}
+
+/* Make sure the elements do not disappear in the designer or editor */
+.wf-design-mode [data-split="heading"],
+.wf-design-mode [data-split="description"],
+.w-editor [data-split="heading"],
+.w-editor [data-split="description"] {
+    visibility: visible !important;
+}
+
+/* Line container styling */
+.line {
+    overflow: hidden; /* Hide overflow for the mask effect */
+    display: block;
+}
+
+/* Word styling */
+.word {
+    display: inline-block;
+}
+
+/* Letter styling */
+.letter {
+    display: inline-block;
 }
 
 .header-top h1 {
-    opacity: 1; /* Make text visible by default */
     position: relative;
     z-index: 10;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle text shadow for better readability */
