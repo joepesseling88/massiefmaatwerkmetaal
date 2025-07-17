@@ -363,6 +363,25 @@ p {
     text-align: center;
     white-space: nowrap;
     font-family: 'Host Grotesk', sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline animation for nav-item */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    background-color: #EAEAEA;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: calc(100% - 24px); /* Adjust for padding */
 }
 
 .nav-right {
