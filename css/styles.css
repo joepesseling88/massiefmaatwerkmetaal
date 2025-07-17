@@ -430,7 +430,7 @@ p {
 
 .language-option {
     display: block;
-    padding: 8px;
+    padding: 4px 8px;
     color: var(--medium-gray);
     font-size: 16px;
     text-align: center;
