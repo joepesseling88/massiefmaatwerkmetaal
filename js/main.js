@@ -1,5 +1,5 @@
 /**
- * MMMetaal - De Metaalzagerij
+ * MMMetaal 
  * Main JavaScript File
  */
 
