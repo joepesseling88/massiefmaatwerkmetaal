@@ -8,9 +8,12 @@ gsap.registerPlugin(InertiaPlugin, SplitText, ScrollTrigger);
 
 // Momentum-based hover effect for iron_shape hero image
 function initMomentumBasedHover() {
-  // If this device can't hover with a fine pointer, stop here
-  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-    console.log('Momentum hover effect disabled: not a desktop device');
+  // Check if this is Firefox
+  const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+  
+  // If this device can't hover with a fine pointer or is Firefox, stop here
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches || isFirefox) {
+    console.log('Momentum hover effect disabled: not a desktop device or using Firefox');
     return;
   }
   
