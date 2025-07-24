@@ -307,6 +307,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Preloader functionality
     initializePreloader();
     
+    // Set form timestamp when page loads
+    const timestampField = document.getElementById('form-timestamp');
+    if (timestampField) {
+        timestampField.value = Date.now();
+    }
+    
     // Iron blocks animation removed as requested
     
     // Mobile menu toggle
@@ -364,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Form validation
+    // Form validation and submission
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
@@ -378,6 +384,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const phoneField = document.getElementById('phone');
             const messageField = document.getElementById('message');
             const termsCheckbox = document.getElementById('terms');
+            const timestampField = document.getElementById('form-timestamp');
+            const submitButton = document.getElementById('submit-button');
             
             // Simple validation
             let isValid = true;
@@ -419,14 +427,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 removeError(termsCheckbox.parentElement);
             }
             
-            // If form is valid, submit it (or show success message)
+            // Time-based anti-spam check
+            if (timestampField && timestampField.value) {
+                const submissionTime = Date.now();
+                const loadTime = parseInt(timestampField.value);
+                const elapsedTime = submissionTime - loadTime;
+                
+                // If form is submitted in less than 3 seconds, likely a bot
+                if (elapsedTime < 3000) {
+                    console.log('Form submitted too quickly. Possible bot detected.');
+                    // Show success message but don't actually submit
+                    showSuccessMessage();
+                    return;
+                }
+            }
+            
+            // If form is valid, submit it
             if (isValid) {
-                // In a real application, you would send the form data to a server
-                // For this example, we'll just show an alert
-                alert('Formulier succesvol verzonden!');
-                contactForm.reset();
+                // Disable submit button to prevent multiple submissions
+                if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Verzenden...';
+                }
+                
+                // Let Netlify handle the form submission
+                contactForm.submit();
             }
         });
+    }
+    
+    // Show success message (for bot submissions)
+    function showSuccessMessage() {
+        alert('Formulier succesvol verzonden!');
+        contactForm.reset();
     }
     
     // Helper functions for form validation

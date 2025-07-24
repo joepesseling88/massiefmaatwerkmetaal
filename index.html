@@ -255,7 +255,13 @@
                 </div>
                 <div class="contact-form-container">
                     <h3>Op zoek naar maatwerk in metaal? Neem contact met ons op.</h3>
-                    <form class="contact-form">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="notification-email" value="hello@voyagedigital.agency" />
+                        <p class="honeypot-field" style="display:none">
+                            <label>Niet invullen als je een mens bent: <input name="bot-field" /></label>
+                        </p>
+                        <input type="hidden" name="form-timestamp" id="form-timestamp" />
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Naam*</label>
@@ -287,7 +293,7 @@
                                 <input type="checkbox" id="terms" name="terms" required>
                                 <label for="terms">Ik ga akkoord met de <a href="images/Metaalunievoorwaarden 2025 - Nederlands.pdf" target="_blank">algemene voorwaarden</a>.</label>
                             </div>
-                            <button type="submit" class="submit-button">Verzenden</button>
+                            <button type="submit" class="submit-button" id="submit-button">Verzenden</button>
                         </div>
                     </form>
                 </div>
